@@ -41,8 +41,8 @@ public class CTTCompaniesJobsPR2Impl extends CTTCompaniesJobsImpl implements CTT
     /* --------------------------------------------  PR2 OPERATIONS ----------------------------------------------- */
 
     /**
-     - @pre true.
-     - @post if the role code is new, the roles will remain the same plus a new role with the indicated data.
+     * @pre true.
+     * @post if the role code is new, the roles will remain the same plus a new role with the indicated data.
        If not, the role data will have been updated with the new data.
     */
     @Override
@@ -60,8 +60,8 @@ public class CTTCompaniesJobsPR2Impl extends CTTCompaniesJobsImpl implements CTT
     }
 
     /**
-     - @pre the role exists.
-     - @post if the employee's ID is new, the employees will remain the same plus a new employee;
+     * @pre the role exists.
+     * @post if the employee's ID is new, the employees will remain the same plus a new employee;
        the number of employees will be the same plus one, and the number of employees in a role will be the same plus one.
        If not, the employee data will have been updated with the new data, and if the role is modified, the number of
        employees in the old role will be the same minus one, and the number of employees in the new role will be the
@@ -85,8 +85,8 @@ public class CTTCompaniesJobsPR2Impl extends CTTCompaniesJobsImpl implements CTT
     }
 
     /**
-     - @pre true.
-     - @post if the roomId is new, the rooms will remain the same plus a new room with the indicated data.
+     * @pre true.
+     * @post if the roomId is new, the rooms will remain the same plus a new room with the indicated data.
        If not, the room data will have been updated with the new data.
      */
     @Override
@@ -107,8 +107,8 @@ public class CTTCompaniesJobsPR2Impl extends CTTCompaniesJobsImpl implements CTT
 
 
     /**
-     - @pre true.
-     - @post if the employee is not assigned to the room, the employees in the room will remain the same plus a new one.
+     * @pre true.
+     * @post if the employee is not assigned to the room, the employees in the room will remain the same plus a new one.
        If the employee is already assigned to the room, an error will be displayed. If the employee or the room does
        not exist, an error will be indicated.
      */
@@ -129,8 +129,8 @@ public class CTTCompaniesJobsPR2Impl extends CTTCompaniesJobsImpl implements CTT
 
 
     /**
-     - @pre true.
-     - @post returns an iterator to traverse all employees assigned to a room. In case there are no employees or the
+     * @pre true.
+     * @post returns an iterator to traverse all employees assigned to a room. In case there are no employees or the
        room does not exist, an error should be indicated.
      */
     @Override
@@ -146,8 +146,8 @@ public class CTTCompaniesJobsPR2Impl extends CTTCompaniesJobsImpl implements CTT
     }
 
     /**
-     - @pre the role exists.
-     - @post returns an iterator to traverse all employees of a role. If there are no employees with that role,
+     * @pre the role exists.
+     * @post returns an iterator to traverse all employees of a role. If there are no employees with that role,
        an error should be indicated.
      */
     @Override
@@ -167,8 +167,8 @@ public class CTTCompaniesJobsPR2Impl extends CTTCompaniesJobsImpl implements CTT
     }
 
     /**
-     - @pre true.
-     - @post if the equipmentId is new, the equipments will remain the same plus new equipment with the indicated data.
+     * @pre true.
+     * @post if the equipmentId is new, the equipments will remain the same plus new equipment with the indicated data.
        If not, the equipment data will have been updated with the new data
      */
     @Override
@@ -188,8 +188,8 @@ public class CTTCompaniesJobsPR2Impl extends CTTCompaniesJobsImpl implements CTT
 
 
     /**
-     - @pre true.
-     - @post if the equipment is not assigned to the room, the equipments in the room will remain the same plus a new one.
+     * @pre true.
+     * @post if the equipment is not assigned to the room, the equipments in the room will remain the same plus a new one.
        If the equipment is already assigned to the room, an error will be displayed. If the equipment is already assigned
        to another room, it will be unlinked from it and assigned to the new one, and the number of equipments in the old
        room is the same minus one, and the number of equipments in the new assigned room is the same plus one.
@@ -217,8 +217,8 @@ public class CTTCompaniesJobsPR2Impl extends CTTCompaniesJobsImpl implements CTT
 
 
     /**
-     - @pre true.
-     - @post returns the level associated with the worker. If the worker does not exist, an error should be indicated.
+     * @pre true.
+     * @post returns the level associated with the worker. If the worker does not exist, an error should be indicated.
      */
     @Override
     public CTTCompaniesJobsPR2.Level getLevel(String workerId) throws WorkerNotFoundException {
@@ -231,8 +231,8 @@ public class CTTCompaniesJobsPR2Impl extends CTTCompaniesJobsImpl implements CTT
 
 
     /**
-     - @pre true.
-     - @post returns an iterator to traverse all non-substitute workers enrolled in the job offer jobOfferId.
+     * @pre true.
+     * @post returns an iterator to traverse all non-substitute workers enrolled in the job offer jobOfferId.
        If the job offer does not exist or no worker is enrolled, an error should be indicated.
      */
     @Override
@@ -248,8 +248,8 @@ public class CTTCompaniesJobsPR2Impl extends CTTCompaniesJobsImpl implements CTT
     }
 
     /**
-     - @pre true.
-     - @post returns an iterator to traverse all substitute workers enrolled in the job offer jobOfferId.
+     * @pre true.
+     * @post returns an iterator to traverse all substitute workers enrolled in the job offer jobOfferId.
        If the job offer does not exist or no substitute is enrolled, an error should be indicated.
      */
     @Override
@@ -273,8 +273,8 @@ public class CTTCompaniesJobsPR2Impl extends CTTCompaniesJobsImpl implements CTT
 
 
     /**
-     - @pre true.
-     - @post returns an iterator to traverse all rooms that have no assigned employees.
+     * @pre true.
+     * @post returns an iterator to traverse all rooms that have no assigned employees.
        If there are no rooms without any employees, an error should be indicated.
      */
     @Override
@@ -294,8 +294,8 @@ public class CTTCompaniesJobsPR2Impl extends CTTCompaniesJobsImpl implements CTT
 
 
     /**
-     - @pre true.
-     - @post returns an iterator to traverse the top 5 rooms with the most assigned materials.
+     * @pre true.
+     * @post returns an iterator to traverse the top 5 rooms with the most assigned materials.
        If there are no rooms or no materials assigned, an error will be indicated.
      */
     @Override
@@ -316,8 +316,8 @@ public class CTTCompaniesJobsPR2Impl extends CTTCompaniesJobsImpl implements CTT
 
 
     /**
-     - @pre employeeDni is not a follower of employeeFollowerDni.
-     - @post the number of followers of employeeDni will be the same plus one, and the number of employees
+     * @pre employeeDni is not a follower of employeeFollowerDni.
+     * @post the number of followers of employeeDni will be the same plus one, and the number of employees
        followed (followings) by employeeFollowerDni will be the same plus one. In case the employee to follow or the
        followed employee does not exist, an error will be indicated.
      */
@@ -344,8 +344,8 @@ public class CTTCompaniesJobsPR2Impl extends CTTCompaniesJobsImpl implements CTT
 
 
     /**
-     - @pre true.
-     - @post returns an iterator to traverse the followers of an employee.
+     * @pre true.
+     * @post returns an iterator to traverse the followers of an employee.
        If the employee does not exist or has no followers, an error should be indicated.
      */
     @Override
@@ -371,8 +371,8 @@ public class CTTCompaniesJobsPR2Impl extends CTTCompaniesJobsImpl implements CTT
 
 
     /**
-     - @pre true.
-     - @post returns an iterator to traverse the employees that an employee is following.
+     * @pre true.
+     * @post returns an iterator to traverse the employees that an employee is following.
        If the employee does not exist or has no employees following, an error should be indicated.
      */
     @Override
@@ -397,8 +397,8 @@ public class CTTCompaniesJobsPR2Impl extends CTTCompaniesJobsImpl implements CTT
     }
 
      /**
-      - @pre true.
-      - @post returns an iterator to traverse suggested employees who are followers of employees that employeeDni is
+      * @pre true.
+      * @post returns an iterator to traverse suggested employees who are followers of employees that employeeDni is
         following and who are currently not followers. If the employee does not exist or has no employees following,
         an error will be indicated.
      */
@@ -435,8 +435,8 @@ public class CTTCompaniesJobsPR2Impl extends CTTCompaniesJobsImpl implements CTT
 
 
     /**
-     - @pre true.
-     - @post returns an iterator to traverse employees working in the same rooms as employeeDni and whom he/she is
+     * @pre true.
+     * @post returns an iterator to traverse employees working in the same rooms as employeeDni and whom he/she is
        not following. If the employee does not exist or there are no employees not followed assigned to the same rooms, an error will be indicated.
      */
     @Override
@@ -476,7 +476,7 @@ public class CTTCompaniesJobsPR2Impl extends CTTCompaniesJobsImpl implements CTT
     }
 
 
-    /** -------------------------------------  PR2 AUXILIARY OPERATIONS ------------------------------------------- */
+    /* -------------------------------------  PR2 AUXILIARY OPERATIONS ------------------------------------------- */
 
     @Override
     public int numRoles() {

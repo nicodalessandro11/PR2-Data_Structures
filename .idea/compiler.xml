@@ -7,8 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="DS_PR-2" />
-        <module name="DS_PR" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="DS_PR" target="16" />
+    </bytecodeTargetLevel>
   </component>
 </project>
